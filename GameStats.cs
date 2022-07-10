@@ -16,7 +16,7 @@ public class GameStats
     public short ThreeShots;
 
     [LoadColumn(3)]
-    public short Reboundings;
+    public short Rebounds;
 
     [LoadColumn(4)]
     public short Interceptions;

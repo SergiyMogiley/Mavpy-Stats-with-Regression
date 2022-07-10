@@ -17,13 +17,13 @@ ITransformer Train(MLContext mlContext, string dataPath)
         .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "LocationEncoded", inputColumnName: "Location"))
         .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "TwoShotsEncoded", inputColumnName: "TwoShots"))
         .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "ThreeShotsEncoded", inputColumnName: "ThreeShots"))
-        .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "ReboundingsEncoded", inputColumnName: "Reboundings"))
+        .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "ReboundsEncoded", inputColumnName: "Rebounds"))
         .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "InterceptionsEncoded", inputColumnName: "Interceptions"))
         .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "LossesEncoded", inputColumnName: "Losses"))
         .Append(mlContext.Transforms.Categorical.OneHotEncoding(outputColumnName: "FoulsEncoded", inputColumnName: "Fouls"))
 
         .Append(mlContext.Transforms.Concatenate("Features", "LocationEncoded", "TwoShotsEncoded", "ThreeShotsEncoded",
-                                                 "ReboundingsEncoded", "InterceptionsEncoded", "LossesEncoded", "FoulsEncoded"))
+                                                 "ReboundsEncoded", "InterceptionsEncoded", "LossesEncoded", "FoulsEncoded"))
 
     .Append(mlContext.Regression.Trainers.FastTree());
 
@@ -65,7 +65,7 @@ void TestSinglePrediction(MLContext mlContext, ITransformer model)
         Location = 0,
         TwoShots = 48,
         ThreeShots = 27,
-        Reboundings = 46,
+        Rebounds = 46,
         Interceptions = 5,
         Losses = 6,
         Fouls = 15,
