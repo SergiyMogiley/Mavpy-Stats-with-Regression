@@ -22,7 +22,7 @@ Features:
 -	location: home (1) or guest (0) game;
 -	2x_shots: quantity of 2-pointers;
 -	3x_shots: quantity of 3-pointers;
--	reboundings: quantity of ball rebounds;
+-	rebounds: quantity of ball rebounds;
 -	interceptions: quantity of ball interceptions;
 -	losses: quantity of ball losses;
 -	fouls: quantity of personal fouls.
@@ -92,7 +92,7 @@ Features:
 -	location: домашній (1) або виїзний (0) матч;
 -	2x_shots: кількість спроб 2-очкових кидків;
 -	3x_shots: кількість спроб 3-очкових кидків;
--	reboundings: загальна кількість підбирань м’яча;
+-	rebounds: загальна кількість підбирань м’яча;
 -	interceptions: кількість перехоплень м’яча;
 -	losses: кількість втрат м’яча;
 -	fouls: кількість персональних фолів.
